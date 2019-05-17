@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- up is code for setting to create bean -->
+
+
+    <!-- A simple definition bean
+        <bean id ="..." class = "...">
+
+        </bean>
+     -->
+
+
+    <!-- create object for use like a injection for System Manage Class -->
+
+
+    <!-- Object Database-->
+    <bean id="database" class="ConstructorInjection.Database">
+        <constructor-arg value="jdbc"/>
+    </bean>
+
+    <!-- Object File-->
+
+    <bean id="file" class="ConstructorInjection.File">
+        <constructor-arg value="dota2"/>
+    </bean>
+
+    <!-- Object Client-->
+
+    <bean id="c" class="ConstructorInjection.Client">
+        <constructor-arg value="Tang"/>
+
+    </bean>
+
+    <bean id="c2" class="ConstructorInjection.Client">
+        <constructor-arg value ="Ponce"/>
+    </bean>
+
+
+    <!--Object Server -->
+    <bean id="server" class="ConstructorInjection.Server">
+        <constructor-arg value="Server1"/>
+        <constructor-arg ref = "c"/>
+    </bean>
+
+
+
+
+    <!-- create object of System Manage -->
+
+    <bean id="systemmanage" class="ConstructorInjection.SystemManage">
+        <constructor-arg ref="database"/>
+    </bean>
+
+    <bean id="systemmanage1" class="ConstructorInjection.SystemManage">
+        <constructor-arg ref="file"/>
+    </bean>
+
+    <bean id="systemmanage2" class="ConstructorInjection.SystemManage">
+        <constructor-arg ref="server"/>
+
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

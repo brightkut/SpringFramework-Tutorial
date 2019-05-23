@@ -9,6 +9,6 @@ public class Log implements Service {
     }
 
     public void showService() {
-        System.out.println("Log");
+        System.out.println(nameLog);
     }
 }

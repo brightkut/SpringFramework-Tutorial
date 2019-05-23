@@ -9,7 +9,7 @@ public class Database implements Service {
     }
 
     public void showService() {
-        System.out.println("Database");
+        System.out.println(nameDB);
 
     }
 }

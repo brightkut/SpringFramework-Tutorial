@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- up is code for setting to create bean -->
+
+
+    <!-- A simple definition bean
+        <bean id ="..." class = "...">
+
+        </bean>
+     -->
+
+    <bean id="log1" class="SetterInjection2.Log">
+        <constructor-arg value="logggggg"/>
+
+    </bean>
+
+    <bean id="mongo" class="SetterInjection2.Database">
+         <constructor-arg value="mongoDatabase"/>
+    </bean>
+    <bean id="my" class="SetterInjection2.Database">
+        <constructor-arg value="MySQL"/>
+    </bean>
+
+    <bean id="app" class="SetterInjection2.App">
+        <constructor-arg value="snapchat"/>
+        <property name="mainService" ref="log1"/>
+        <property name="services">
+            <list>
+                <ref bean = "mongo"/>
+                <ref bean="my"/>
+
+            </list>
+        </property>
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

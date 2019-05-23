@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- up is code for setting to create bean -->
+
+    <context:annotation-config/>
+
+
+    <!-- A simple definition bean
+        <bean id ="..." class = "...">
+
+        </bean>
+     -->
+    <bean id="apart" class="Autowire.Apartment" autowire="byType">
+        <constructor-arg  value="boby"/>
+    </bean>
+
+    <bean id="ferrari" class="Autowire.Car" autowire-candidate="true">
+        <constructor-arg  value="Ferrari"/>
+    </bean>
+
+    <bean id="lam" class="Autowire.Car" autowire-candidate="false">
+        <constructor-arg  value="Lambogini"/>
+    </bean>
+
+    <bean id="apart2" class="Autowire.Apartment" autowire="byName">
+        <constructor-arg  value="cody"/>
+    </bean>
+
+    <bean id="c" class="Autowire.Car" >
+        <constructor-arg  value="MazDA"/>
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

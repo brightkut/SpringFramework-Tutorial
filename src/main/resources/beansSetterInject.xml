@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- up is code for setting to create bean -->
+
+
+    <!-- A simple definition bean
+        <bean id ="..." class = "...">
+
+        </bean>
+     -->
+
+    <!-- create object Client -->
+    <bean id="clientTest" class="SetterInjection.Client">
+        <constructor-arg value="Tony"/>
+        <constructor-arg value="20"/>
+        <constructor-arg value="10.0.3.0"/>
+    </bean>
+
+    <!-- create object Server -->
+    <bean id="server" class="SetterInjection.Server">
+        <constructor-arg value="Steve"/>
+        <property name="client" ref="clientTest"/>
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

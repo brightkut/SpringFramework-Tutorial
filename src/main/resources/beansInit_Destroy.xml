@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- up is code for setting to create bean -->
+
+
+    <!-- A simple definition bean
+        <bean id ="..." class = "...">
+
+        </bean>
+     -->
+
+
+    <!-- create object from Human -->
+    <!--init method is method that run when create instance like constructor -->
+    <!--destrou method is method that run  when context close-->
+    <bean id="h" class="Init_Destroy.Human" init-method="introduce" destroy-method="die">
+        <constructor-arg value="Bob"/>
+        <constructor-arg value ="22"/>
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

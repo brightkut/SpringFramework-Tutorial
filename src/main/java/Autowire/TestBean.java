@@ -10,6 +10,8 @@ public class TestBean {
         System.out.println("------------------");
         Apartment apartment = context.getBean("apart",Apartment.class);
         System.out.println(apartment.getName());
+
+
         apartment.show();
 
         System.out.println("By Name");

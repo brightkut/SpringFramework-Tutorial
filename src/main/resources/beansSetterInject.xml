@@ -22,6 +22,7 @@
     <!-- create object Server -->
     <bean id="server" class="SetterInjection.Server">
         <constructor-arg value="Steve"/>
+        <!-- property is told to call setter method -->
         <property name="client" ref="clientTest"/>
     </bean>
 

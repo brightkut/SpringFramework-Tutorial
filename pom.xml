@@ -23,6 +23,23 @@
             <version>5.0.8.RELEASE</version>
         </dependency>
 
+        <!--Spring AOP-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+
+        <!--AOP aspectj -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+
+
+
 
 
 
